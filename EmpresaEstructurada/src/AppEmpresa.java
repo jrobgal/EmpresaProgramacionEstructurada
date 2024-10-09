@@ -40,11 +40,25 @@ public class AppEmpresa {
 			System.out.println("El total de dinero pagado a todos los empleados es: " + total);
 
 			//Nombre, cargo y salario del empleado que mas salario gana
+			System.out.println("El nombre y el cargo del empleado que mas salario gana es: ");
 			int posicion = 0;
 			double mayorSalario = salarios.get(0);
 			for(int i = 1; i < cantidad; i++) {
 				if(salarios.get(i) > mayorSalario) {
 					mayorSalario = salarios.get(i);
+					posicion = i;
+				}
+			}
+			System.out.println("Nombre: " + nombres.get(posicion) + " Cargo: " + cargos.get(posicion) 
+			+ " Salario: " + salarios.get(posicion));
+
+			//Nombre, cargo y salario del empleado que menos salario gana
+			System.out.println("El nombre y el cargo del empleado que menos salario gana es: ");
+			posicion = 0;
+			double menorSalario = salarios.get(0);
+			for(int i = 1; i < cantidad; i++) {
+				if(salarios.get(i) < mayorSalario) {
+					menorSalario = salarios.get(i);
 					posicion = i;
 				}
 			}
